@@ -1,8 +1,8 @@
 # StockFlow - Smart Inventory Management
 
-AI-powered inventory system with a Google Sheets backend designed for retail operations of any size.
+AI-powered inventory system with a Supabase backend (PostgreSQL + Auth + Storage) designed for retail operations of any size.
 
-![Next.js](https://img.shields.io/badge/Next.js-14-black) ![React](https://img.shields.io/badge/React-18-61dafb) ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6) ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-3-38bdf8) ![Google Sheets API](https://img.shields.io/badge/Google%20Sheets%20API-active-green) ![OpenAI](https://img.shields.io/badge/OpenAI-API-412991)
+![Next.js](https://img.shields.io/badge/Next.js-14-black) ![React](https://img.shields.io/badge/React-18-61dafb) ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6) ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-3-38bdf8) ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?logo=supabase&logoColor=white) ![OpenAI](https://img.shields.io/badge/OpenAI-API-412991)
 
 ## Key Features
 - Opening stock tracking with structured imports
@@ -10,6 +10,8 @@ AI-powered inventory system with a Google Sheets backend designed for retail ope
 - Serial number and warranty lifecycle management
 - Automatic SKU and product naming conventions
 - Dual barcode support for manufacturer codes and internal SKUs
+- Multi-tenant support with Row Level Security (RLS)
+- Document storage for invoices, warranties, and product images
 
 ## Quick Start
 1. Review [`docs/SETUP.md`](docs/SETUP.md) for environment configuration and tooling.
