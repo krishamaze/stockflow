@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Unreleased]
+### Added
+- Configured Git LFS support and binary prevention guidelines for Codex contributors.
+- Documented Codex verification checklist and binary prevention reminders for future tasks.
+
+### Changed
+- Expanded `.gitignore` entries to cover Next.js builds, OS files, and asset upload directories.
+- Consolidated `.gitattributes` LFS patterns and restored lock files to version control for reliable dependency auditing.
+
 ## [0.2.0] - 2025-10-02
 ### Changed
 - **BREAKING**: Migrated backend architecture from Google Sheets to Supabase PostgreSQL for improved performance, querying capabilities, and multi-tenant support with RLS

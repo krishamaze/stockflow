@@ -1,0 +1,16 @@
+# Git LFS configuration for StockFlow
+[lfs]
+  url = https://github.com
+  locksverify = true
+
+# Developers should run `git lfs install` once per machine before working with large assets.
+
+[filter "lfs"]
+  required = true
+  clean = git lfs clean -- %f
+  smudge = git lfs smudge -- %f
+  process = git lfs filter-process
+
+[lfs "public"]
+  include = public/**
+  exclude =
