@@ -1,0 +1,75 @@
+# Git attributes configured for Codex compatibility and binary prevention.
+# Ensures binary assets are tracked via Git LFS and excluded from textual diffs.
+
+# Images
+*.png binary -diff
+*.jpg binary -diff
+*.jpeg binary -diff
+*.gif binary -diff
+*.webp binary -diff
+*.svg binary -diff
+*.ico binary -diff
+*.bmp binary -diff
+*.tif binary -diff
+*.tiff binary -diff
+
+# Fonts
+*.woff binary -diff
+*.woff2 binary -diff
+*.ttf binary -diff
+*.otf binary -diff
+*.eot binary -diff
+*.sfnt binary -diff
+*.fnt binary -diff
+
+# Audio / Video
+*.mp3 binary -diff
+*.wav binary -diff
+*.ogg binary -diff
+*.flac binary -diff
+*.aac binary -diff
+*.m4a binary -diff
+*.mp4 binary -diff
+*.mov binary -diff
+*.avi binary -diff
+*.webm binary -diff
+*.mkv binary -diff
+
+# Archives and other binary blobs
+*.zip binary -diff
+*.tar binary -diff
+*.gz binary -diff
+*.bz2 binary -diff
+*.7z binary -diff
+*.rar binary -diff
+*.dmg binary -diff
+*.iso binary -diff
+
+# Design files
+*.psd binary -diff
+*.ai binary -diff
+*.sketch binary -diff
+*.fig binary -diff
+*.xd binary -diff
+
+# Git LFS tracking for Codex compatibility
+*.png filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.jpeg filter=lfs diff=lfs merge=lfs -text
+*.gif filter=lfs diff=lfs merge=lfs -text
+*.webp filter=lfs diff=lfs merge=lfs -text
+*.ico filter=lfs diff=lfs merge=lfs -text
+*.woff filter=lfs diff=lfs merge=lfs -text
+*.woff2 filter=lfs diff=lfs merge=lfs -text
+*.ttf filter=lfs diff=lfs merge=lfs -text
+*.otf filter=lfs diff=lfs merge=lfs -text
+
+# Lock files should remain text for clean diffs
+package-lock.json text -diff
+pnpm-lock.yaml text -diff
+yarn.lock text -diff
+
+# Project specific: ensure public assets use LFS
+public/**/* filter=lfs diff=lfs merge=lfs -text
+
+# Reminder: run `git lfs install` locally before committing large assets.
