@@ -36,7 +36,3 @@ Icon?
 public/uploads/
 public/videos/
 
-# Misc lock files
-package-lock.json
-pnpm-lock.yaml
-yarn.lock

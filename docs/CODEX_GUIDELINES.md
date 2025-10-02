@@ -9,6 +9,19 @@ These guidelines help AI contributors prepare StockFlow for binary-safe workflow
 - Lock files remain tracked as plain text to maintain reliable diffing and dependency auditing.
 - Verify attributes with `git check-attr -a <file>` before committing new assets.
 
+## Verification Checklist
+```bash
+# Confirm tracked patterns registered with Git LFS
+git lfs track
+
+# Inspect attributes for a specific asset prior to committing
+git check-attr -a public/logo.png
+# Expected output includes: filter: lfs, diff: lfs, merge: lfs, binary
+
+# Review the list of files currently tracked by LFS
+git lfs ls-files
+```
+
 ## Placeholder Asset Strategy
 - When mock visuals are required, prefer hosted placeholders over storing local binaries.
 - Use [`https://placehold.co/{width}x{height}`](https://placehold.co) for preview URLs during development.
@@ -35,3 +48,15 @@ These guidelines help AI contributors prepare StockFlow for binary-safe workflow
 - Confirm tracked patterns via `git lfs track` and commit updates to `.gitattributes` when new binary types arise.
 - Avoid storing secrets or configuration files in LFS—it's dedicated to large binaries only.
 - When cloning or pulling, ensure collaborators run `git lfs pull` to download the actual binary content.
+
+## ⚠️ Critical: For All Future Codex Tasks
+
+**Never include:**
+- ❌ Creating `favicon.ico`, `logo.png`, or other binary design assets.
+- ❌ Downloading or committing font files manually.
+- ❌ Generating image, audio, or video binaries inside the repository.
+
+**Always include when assets are required:**
+- ✅ Placeholder URLs such as `https://placehold.co/{width}x{height}`.
+- ✅ Icons from `lucide-react` components, e.g. `<Icon className="h-4 w-4" />`.
+- ✅ Fonts imported via `next/font/google` (or existing shared loaders).
