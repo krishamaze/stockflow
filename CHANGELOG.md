@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 - Expanded `.gitignore` entries to cover Next.js builds, OS files, and asset upload directories.
 - Consolidated `.gitattributes` LFS patterns and restored lock files to version control for reliable dependency auditing.
+- Updated `.env.example` to align with Supabase setup instructions while keeping Google Sheets export optional.
 
 ## [0.2.0] - 2025-10-02
 ### Changed

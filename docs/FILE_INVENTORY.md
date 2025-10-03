@@ -9,7 +9,7 @@ Update this file whenever you add, remove, or significantly modify any file.
 | `.gitignore` | Defines files and folders excluded from version control. | Removed lock files from ignore list to keep dependency tracking consistent. |
 | `.gitattributes` | Configures binary detection and Git LFS tracking rules. | Consolidated LFS rules to avoid conflicts and removed broad public wildcard. |
 | `.gitlfsconfig` | Repository-specific Git LFS configuration. | Documented default LFS settings for public assets. |
-| `.env.example` | Lists required environment variables with placeholders. | Documented required secrets for local setup. |
+| `.env.example` | Lists required environment variables with placeholders. | Updated Supabase-focused defaults and marked Google Sheets export as optional. |
 | `CHANGELOG.md` | Records notable changes across releases. | Logged version 0.1.0 initial setup. |
 | `docs/CONTEXT.md` | Captures business context, rules, and decisions. | Documented initial business context. |
 | `docs/ARCHITECTURE.md` | Describes technical stack and architecture decisions. | Documented initial architecture. |
