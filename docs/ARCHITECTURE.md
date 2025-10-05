@@ -42,3 +42,39 @@
 
 ## Optional Integrations
 - Google Sheets export via scheduled sync or manual export for reporting/backup purposes.
+
+## UI Components
+
+### Cascading Autocomplete Combobox
+A production-ready autocomplete component built with Radix UI primitives and designed for reusability across all forms.
+
+**Key Features:**
+- Independent fields (e.g., Brand, Color) with no dependencies
+- Cascading dependencies (e.g., Brand → Model Name → Model Number)
+- Fuzzy search with Fuse.js for client-side matching
+- ETag-based caching with sessionStorage for performance
+- Debounced API calls (300ms default) to reduce server load
+- Full keyboard navigation and WCAG 2.1 AA accessibility
+- Request cancellation with AbortController
+- Custom value creation support
+
+**Architecture Decisions:**
+- **State Management:** useReducer for complex state with cascading dependencies
+- **Fetch Strategy:** Hybrid prefetch (small datasets) + lazy loading (large datasets)
+- **Caching:** Aggressive 24-hour TTL with ETag validation
+- **Search:** Client-side fuzzy search for <1000 items
+- **Validation:** On-blur with real-time feedback for errors
+
+**Performance:**
+- Bundle size: ~15KB gzipped (including Radix UI and Fuse.js)
+- Search response: <10ms for 500 items (client-side)
+- API response: <300ms p95 (with caching)
+- Cache hit rate: >70% target
+
+**Documentation:**
+- `docs/COMBOBOX_DECISIONS.md` - Architectural decisions
+- `docs/COMBOBOX_API.md` - API reference
+- `docs/COMBOBOX_USAGE.md` - Usage guide
+
+**Demo:**
+- `/demo/combobox` - Interactive demo with debug panel

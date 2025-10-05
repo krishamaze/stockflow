@@ -18,6 +18,40 @@ AI-powered inventory system with a Supabase backend (PostgreSQL + Auth + Storage
 2. Copy `.env.example` to `.env.local` and fill in your credentials.
 3. Install dependencies with `npm install` (or `yarn install`).
 4. Run the development server using `npm run dev` (or `yarn dev`).
+5. Visit `http://localhost:3000/demo/combobox` to see the cascading combobox demo.
+
+## New: Cascading Autocomplete Combobox 🎉
+
+A production-ready autocomplete component with fuzzy search, caching, and full accessibility support.
+
+**Features:**
+- ✅ Independent & cascading fields
+- ✅ Fuzzy search with match highlighting
+- ✅ ETag-based caching
+- ✅ Full keyboard navigation
+- ✅ WCAG 2.1 AA compliant
+
+**Quick Example:**
+```typescript
+import { CascadingCombobox } from '@/components/ui/cascading-combobox';
+
+<CascadingCombobox
+  label="Brand"
+  endpoint="/api/brands"
+  value={brand}
+  onChange={setBrand}
+  prefetch={true}
+/>
+```
+
+**Documentation:**
+- [Component README](components/ui/README.md) - Quick reference
+- [API Reference](docs/COMBOBOX_API.md) - Complete prop documentation
+- [Usage Guide](docs/COMBOBOX_USAGE.md) - Common patterns and examples
+- [Architectural Decisions](docs/COMBOBOX_DECISIONS.md) - Design rationale
+- [Implementation Summary](docs/COMBOBOX_SUMMARY.md) - Project overview
+
+**Demo:** Visit `/demo/combobox` to see it in action!
 
 ## Documentation
 Comprehensive documentation lives in the [`docs/`](docs) directory:
